@@ -9,7 +9,10 @@
     "test-whithout-cache": "testcafe chrome ./tests -s takeOnFails=true --disable-page-caching",
     "test:headless": "testcafe chrome:headless ./tests",
     "test:chrome:mobile": "testcafe chrome:emulation:device=pixel 5 ./tests",
-    "test:firefox": "testcafe firefox ./tests"
+    "test:firefox": "testcafe firefox ./tests",
+    "test-pararell": "testcafe -c 5 chrome ./tests/e2e -s takeOnFails=true",
+    "test-pararell:headless": "testcafe -c 5 chrome:headless ./tests/e2e -s takeOnFails=true",
+    "test-multiples": "testcafe chrome,firefox ./tests/e2e -s takeOnFails=true"
   },
   "keywords": [],
   "author": "",
