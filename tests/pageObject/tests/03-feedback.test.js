@@ -12,6 +12,8 @@ test("user can submit feedback via form", async (t) => {
   await t.typeText(feedbackPage.form_comment, "your comment goes here", {
     paste: true,
   });
+
+  feedbackPage.waitFor(4000);
   await t.click(feedbackPage.form_submitButton);
 
   await t

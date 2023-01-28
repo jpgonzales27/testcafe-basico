@@ -1,7 +1,9 @@
 import { Selector, t } from "testcafe";
+import BasePage from "./BasePage";
 
-class FeedbackPage {
+class FeedbackPage extends BasePage {
   constructor() {
+    super();
     this.linkToFeedback = Selector("#feedback");
     this.form_name = Selector("#name");
     this.form_email = Selector("#email");
