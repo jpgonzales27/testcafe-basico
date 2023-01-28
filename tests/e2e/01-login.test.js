@@ -37,13 +37,13 @@ test("User can login into the application", async (t) => {
   await t.click(submitButton);
 
   const accountSumaryTab = Selector("#account_sumary_tab");
-  await t.expect(accountSumaryTab).ok();
+  await t.expect(accountSumaryTab.exists).ok();
   await t.expect(loginForm.exists).notOk();
 
   const userIcon = Selector(".icon-user");
   await t.click(userIcon);
 
-  const logoutButton = Select("#logout_link");
+  const logoutButton = Selector("#logout_link");
   await t.click(logoutButton);
 
   await t.expect(logoutButton.exists).notOk();
